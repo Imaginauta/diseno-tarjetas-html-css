@@ -59,7 +59,9 @@ svg {
 
 .section-cards {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .section-card {
@@ -71,6 +73,18 @@ svg {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   width: 31%;
+}
+
+@media (max-width: 767px) {
+  .section-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 450px) {
+  .section-card {
+    width: 100%;
+  }
 }
 
 .section-card:hover {
